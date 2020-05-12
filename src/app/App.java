@@ -18,9 +18,9 @@ public class App {
                 }//while read line in file
 
                 myReader.close();
-                System.out.println("Save file successfully");
+                System.out.println("The operation is finished.");
           } catch (FileNotFoundException e) {
-                System.out.println("An error occurred.");
+                System.out.println("Operation failed");
                 e.printStackTrace();
           }    
     }// main
@@ -44,7 +44,7 @@ public class App {
             PrintWriter WriteFile = new PrintWriter("E:\\Job-Java\\dictionary\\" + firstF + "\\" + secondF + "\\" + word + ".txt");
             
             for(int i = 0; i < 100; i++){
-                WriteFile.write(word);
+                WriteFile.write(word + ", ");
             }// for write word to file
 
             WriteFile.close();
@@ -53,7 +53,7 @@ public class App {
             PrintWriter WriteFile = new PrintWriter("E:\\Job-Java\\dictionary\\" + firstF + "\\" + word + ".txt");
 
             for(int i = 0; i < 100; i++){
-                WriteFile.write(word);
+                WriteFile.write(word + ", ");
             }// for write word to file
 
             WriteFile.close();
